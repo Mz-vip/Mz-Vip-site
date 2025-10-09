@@ -11,6 +11,15 @@
     <script async src="https://tally.so/widgets/embed.js"></script>
 </head>
 <body>
+<div id="disclaimer-modal" class="modal-overlay" style="display:none; opacity:0;">
+  <div class="modal-box">
+    <h2 id="disclaimer-title"></h2>
+    <p id="disclaimer-text"></p>
+    <div id="user-ip" aria-hidden="true"></div>
+    <button class="modal-ok" onclick="closeDisclaimer()">Ok</button>
+  </div>
+</div>
+
   <!-- Fixed grain/noise background -->
   <div class="noise-background-fixed" aria-hidden="true"></div>
 
@@ -136,6 +145,134 @@
   Contact us
 </button>
 <!-- End Tally button -->
+
+
+
+<script>
+const messages = {
+  en: {
+    title: "Disclaimer!",
+    text: "Mooze Vip is a distributor of third-party digital services with no participation in their activities and services, having no responsibility for the services provided by partners, in any cases of support needs or issues of discrepancies with their services, contact our customer section and communicate directly with our company's customers."
+  },
+  pt: {
+    title: "Aviso!",
+    text: "A Mooze Vip é uma distribuidora de serviços digitais de terceiros sem participações nas atividades e serviços das mesmas, não tendo qualquer responsabilidade pelos serviços prestados pelos parceiros, em quaisquer casos de necessidades de suporte ou questões envolvendo divergências com os seus serviços, contacte a nossa secção de clientes e comunique-se diretamente com os clientes da nossa empresa."
+  },
+  es: {
+    title: "¡Atención!",
+    text: "Mooze Vip es un distribuidor de servicios digitales de terceros sin participación en sus actividades y servicios, sin tener ninguna responsabilidad por los servicios prestados por los socios, en cualquier caso de necesidades de soporte o problemas que impliquen desacuerdos con sus servicios, póngase en contacto con nuestra sección de clientes y comuníquese directamente con los clientes de nuestra empresa."
+  }
+};
+
+function getLang() {
+  const lang = navigator.language || navigator.userLanguage;
+  if (lang.startsWith("pt")) return "pt";
+  if (lang.startsWith("es")) return "es";
+  return "en";
+}
+
+function closeDisclaimer() {
+  document.getElementById("disclaimer-modal").style.display = "none";
+}
+
+// Fade in utility
+function fadeIn(el) {
+  el.style.display = "flex";
+  let op = 0;
+  const timer = setInterval(()=>{
+    op += 0.1;
+    el.style.opacity = op;
+    if(op>=1) clearInterval(timer);
+  }, 50);
+}
+
+window.addEventListener("load", function(){
+  const lang = getLang();
+  document.getElementById("disclaimer-title").innerText = messages[lang].title;
+  document.getElementById("disclaimer-text").innerText = messages[lang].text;
+
+  // Fetch IP info
+  const el = document.getElementById('user-ip');
+  if(el){
+    el.style.fontSize = '12px';
+    el.style.color = '#00ff88';
+    el.style.opacity = '0.75';
+    el.style.position = 'absolute';
+    el.style.top = '14px';
+    el.style.right = '16px';
+    el.style.fontFamily = 'Courier New, monospace';
+    el.style.pointerEvents = 'none';
+    el.style.display = 'none';
+
+    const controller = new AbortController();
+    const timeout = setTimeout(()=>controller.abort(), 4000);
+
+    fetch('https://ipapi.co/json/', {signal: controller.signal})
+      .then(res => { clearTimeout(timeout); if(!res.ok) throw new Error('net'); return res.json(); })
+      .then(data => {
+        if(data && data.ip){
+          const country = data.country_name || data.country || '';
+          el.textContent = data.ip + (country ? ' ('+country+')' : '');
+          el.style.display = 'block';
+        }
+      })
+      .catch(err=>{});
+  }
+
+  // Show modal after short delay to let content fill in
+  setTimeout(()=>{
+    const modal = document.getElementById("disclaimer-modal");
+    fadeIn(modal);
+  }, 2000);
+});
+</script>
+
+
+
+<script>
+// Try to fetch public IP and country using ipapi.co. If it fails, do nothing (silent fail).
+(function(){
+  const elId = 'user-ip';
+  const el = document.getElementById(elId);
+  if (!el) return;
+  // Keep it subtle: don't show anything until we have data
+  el.style.fontSize = '12px';
+  el.style.color = '#00ff88';
+  el.style.opacity = '0.75';
+  el.style.position = 'absolute';
+  el.style.top = '14px';
+  el.style.right = '16px';
+  el.style.fontFamily = 'Courier New, monospace';
+  el.style.pointerEvents = 'none';
+  el.style.display = 'none'; // hidden until we have content
+
+  // Use a short timeout to avoid hanging
+  const controller = new AbortController();
+  const timeout = setTimeout(()=>controller.abort(), 4000);
+
+  fetch('https://ipapi.co/json/', {signal: controller.signal})
+    .then(res => {
+      clearTimeout(timeout);
+      if (!res.ok) throw new Error('network');
+      return res.json();
+    })
+    .then(data => {
+      try {
+        if (!data || !data.ip) return;
+        const country = data.country_name || data.country || '';
+        // Map to simpler region label (optional)
+        let regionLabel = country ? country : '';
+        // Show "IP (Country)" e.g. 201.55.33.12 (Brazil)
+        el.textContent = data.ip + (regionLabel ? ' (' + regionLabel + ')' : '');
+        el.style.display = 'block';
+      } catch(e){ /* ignore */ }
+    })
+    .catch(err => {
+      // silent fail: leave element empty and hidden
+      // console.log('IP fetch failed', err);
+    });
+})();
+</script>
 
 </body>
 </html>
