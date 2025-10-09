@@ -507,3 +507,42 @@ body {
     background-blend-mode: overlay;
     background-size: auto, cover;
 }
+
+
+
+/* TALLY BUTTON INJECTION */
+/* Tally floating Contact button styles */
+.tally-contact-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: linear-gradient(90deg, #6EF0C3, #7A5CFF);
+  color: #08121a;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35), 0 0 24px rgba(122,92,255,0.12);
+  cursor: pointer;
+  z-index: 99999;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.tally-contact-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.45), 0 0 32px rgba(122,92,255,0.18);
+}
+
+/* mobile adjustments */
+@media (max-width: 480px) {
+  .tally-contact-btn {
+    bottom: 16px;
+    right: 14px;
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+}
