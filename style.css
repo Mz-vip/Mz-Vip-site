@@ -508,9 +508,6 @@ body {
     background-size: auto, cover;
 }
 
-
-
-/* TALLY BUTTON INJECTION */
 /* Tally floating Contact button styles */
 .tally-contact-btn {
   position: fixed;
@@ -537,7 +534,6 @@ body {
   box-shadow: 0 12px 30px rgba(0,0,0,0.45), 0 0 32px rgba(122,92,255,0.18);
 }
 
-/* mobile adjustments */
 @media (max-width: 480px) {
   .tally-contact-btn {
     bottom: 16px;
