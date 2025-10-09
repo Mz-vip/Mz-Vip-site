@@ -542,3 +542,9 @@ body {
     font-size: 14px;
   }
 }
+
+
+/* Smooth scrolling for anchors */
+html {
+  scroll-behavior: smooth;
+}
