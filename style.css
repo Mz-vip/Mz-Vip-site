@@ -489,7 +489,7 @@ main {
     display: flex !important;
     gap: 20px;
   }
-  header nav a {
+  header nav a { font-size: 0.85em; 
     color: #e5f0ff;
     text-decoration: none;
     font-size: 16px;
