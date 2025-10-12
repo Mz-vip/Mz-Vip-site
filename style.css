@@ -503,7 +503,7 @@ main {
 /* Noise effect applied */
 
 body {
-    background: url('noise.gif') repeat, linear-gradient(180deg, #0b0f0e 0%, #101418 100%);
+    background: url('') repeat, linear-gradient(180deg, #0b0f0e 0%, #101418 100%);
     background-blend-mode: overlay;
     background-size: auto, cover;
 }
