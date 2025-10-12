@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting...</title>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const lang = navigator.language.toLowerCase();
+      if (lang.startsWith("pt")) {
+        window.location.href = "index_pt-br.html";
+      } else if (lang.startsWith("es")) {
+        window.location.href = "index_es.html";
+      } else {
+        window.location.href = "index_en.html";
+      }
+    });
+  </script>
+</head>
+<body style="background:#000;color:#00ff88;font-family:monospace;text-align:center;margin-top:20%;">
+  <p>Redirecting to the appropriate Terms of Use & Privacy page...</p>
+</body>
+</html>

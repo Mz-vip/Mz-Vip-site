@@ -544,67 +544,129 @@ body {
 }
 
 
-/* Smooth scrolling for anchors */
-html {
-  scroll-behavior: smooth;
+/* === Terms Overlay & Card === */
+.terms-overlay{
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.8);
+  display: none; align-items: center; justify-content: center;
+  z-index: 100001;
+  transition: opacity .3s ease;
 }
-
-/* Disclaimer Modal Overlay */
-.modal-overlay {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.92);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 100000;
-}
-
-.modal-box {
-  background: #000;
-  color: #00ff88;
+.terms-card{
+  position: relative;
+  width: min(720px, 92vw);
+  background: #0a0a0a;
+  border: 1px solid rgba(0,255,136,0.25);
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6), 0 0 24px rgba(0,255,136,0.15);
+  padding: 20px 16px;
+  color: #d9ffea;
   font-family: 'Courier New', monospace;
-  padding: 25px;
-  border-radius: 10px;
-  max-width: 600px;
+}
+.terms-close{
+  position: absolute; top: 10px; right: 12px;
+  background: transparent; border: none; color: #00ff88;
+  font-size: 28px; cursor: pointer; line-height: 1;
+  opacity: .8;
+}
+.terms-title{
+  margin: 6px 8px 8px; font-size: 18px; color: #8bffd0;
+}
+.terms-sub{
+  margin: 0 8px 14px; opacity: .85; color: #9fffe0;
+}
+.terms-list{ display: flex; flex-direction: column; gap: 10px; padding: 4px; }
+.terms-item{
+  display: grid; grid-template-columns: 44px 1fr auto; align-items: center;
+  gap: 12px; padding: 10px 12px; border-radius: 12px;
+  background: linear-gradient(180deg, rgba(0,255,136,0.06), rgba(0,0,0,0));
+  border: 1px solid rgba(0,255,136,0.12);
+  text-decoration: none; color: inherit;
+}
+.terms-item:hover{
+  border-color: rgba(0,255,136,0.35);
+  box-shadow: inset 0 0 0 1px rgba(0,255,136,0.12);
+}
+.terms-icon{ width: 44px; height: 44px; object-fit: contain; border-radius: 10px; }
+.terms-texts{ display:flex; flex-direction: column; }
+.terms-name{ color: #00ff88; font-size: 16px; letter-spacing: .2px; }
+.terms-desc{ color: #b9ffe9; font-size: 12px; opacity: .8; }
+.terms-arrow{ color:#00ff88; font-size: 22px; opacity: .8; margin-left: 8px; }
+
+@media (max-width: 480px){
+  .terms-card{ width: 94vw; padding: 16px 12px; }
+  .terms-title{ font-size: 16px; }
+}
+
+/* ===== Customers section alignment (center axis) ===== */
+.customers {
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+.customers-inner {
+  /* Coluna e eixo central compartilhado pelo título, card e botão */
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* <- eixo central único */
+  gap: 18px;               /* espaçamento vertical entre elementos */
+  max-width: 980px;        /* largura “segura” para a seção */
+  margin-inline: auto;     /* centraliza a própria seção no viewport */
+}
+
+.customers-title {
+  margin: 0 0 8px 0;
   text-align: center;
-  box-shadow: 0 0 20px rgba(0,255,128,0.6);
-  border: 1px solid #00ff88;
 }
 
-.modal-box h2 {
-  margin-bottom: 15px;
-  font-size: 22px;
-  color: #00ff88;
-  text-shadow: 0 0 10px rgba(0,255,128,0.8);
+/* Card (usa o seu visual atual, só garantindo centralização) */
+.customer-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-.modal-ok {
-  margin-top: 20px;
-  padding: 10px 24px;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  background: #00ff88;
-  color: #000;
-  font-weight: bold;
-  cursor: pointer;
-  transition: transform 0.2s ease;
+.customer-logo {
+  width: min(360px, 60vw);   /* responsivo sem estourar layout */
+  height: auto;
+  border-radius: 14px;       /* combina com o site */
+  display: block;
 }
 
-.modal-ok:hover {
-  transform: scale(1.05);
-  background: #33ffaa;
+.customer-desc {
+  margin: 10px 0 6px 0;
+  opacity: .85;
 }
 
+.visit-link {
+  color: #00ffcc;
+  text-decoration: none;
+  font-weight: 600;
+}
+.visit-link:hover { text-decoration: underline; }
 
-/* IP badge tweak */
+/* Botão Google Play centralizado no mesmo eixo */
+.google-play-cta {
+  display: inline-block;
+  margin-top: 16px;
+  filter: drop-shadow(0 0 10px rgba(0,255,204,.15));
+  transition: transform .12s ease, filter .12s ease, opacity .12s ease;
+}
+.google-play-cta img {
+  height: 58px;             /* ajuste fino do tamanho do badge */
+  width: auto;
+  display: block;
+}
+.google-play-cta:hover {
+  transform: translateY(-1px);
+  filter: drop-shadow(0 0 14px rgba(0,255,204,.25));
+  opacity: .96;
+}
 
-/* Ensure modal-box contains positioned children for IP badge */
-.modal-box { position: relative; }
-#user-ip { white-space: nowrap; }
-
-
-/* Fade in effect for disclaimer modal */
-#disclaimer-modal { transition: opacity 0.5s ease; }
+/* Mobile: mantém tudo central e respirando */
+@media (max-width: 640px) {
+  .customers { padding-top: 28px; padding-bottom: 48px; }
+  .customers-inner { gap: 16px; }
+  .google-play-cta img { height: 52px; }
+}
