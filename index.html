@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mooze VIP | Distribuição &amp; Marketing Digital</title>
+<!-- Fonts: Inter -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<!-- Tally Widget Script -->
+<script src="https://tally.so/widgets/embed.js"></script>
+<!-- Configuration -->
+<style>
+body {
+background-color: #050505;
+background-image:
+radial-gradient(circle at 15% 50%, rgba(99, 102, 241, 0.05) 0%, transparent 25%),
+radial-gradient(circle at 85% 30%, rgba(168, 85, 247, 0.05) 0%, transparent 25%),
+linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+background-size: 100% 100%, 100% 100%, 50px 50px, 50px 50px;
+}
+.glass-card {
+background: linear-gradient(180deg, rgba(20, 20, 23, 0.7) 0%, rgba(20, 20, 23, 0.4) 100%);
+backdrop-filter: blur(8px);
+border: 1px solid rgba(255, 255, 255, 0.06);
+box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.glass-header {
+background: rgba(5, 5, 5, 0.7);
+backdrop-filter: blur(12px);
+border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+</style>
+<link id="all-fonts-link-font-geist" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-geist">.font-geist { font-family: 'Geist', sans-serif !important; }</style><link id="all-fonts-link-font-roboto" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-roboto">.font-roboto { font-family: 'Roboto', sans-serif !important; }</style><link id="all-fonts-link-font-montserrat" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-montserrat">.font-montserrat { font-family: 'Montserrat', sans-serif !important; }</style><link id="all-fonts-link-font-poppins" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-poppins">.font-poppins { font-family: 'Poppins', sans-serif !important; }</style><link id="all-fonts-link-font-playfair" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&amp;display=swap"><style id="all-fonts-style-font-playfair">.font-playfair { font-family: 'Playfair Display', serif !important; }</style><link id="all-fonts-link-font-instrument-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-instrument-serif">.font-instrument-serif { font-family: 'Instrument Serif', serif !important; }</style><link id="all-fonts-link-font-merriweather" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&amp;display=swap"><style id="all-fonts-style-font-merriweather">.font-merriweather { font-family: 'Merriweather', serif !important; }</style><link id="all-fonts-link-font-bricolage" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-bricolage">.font-bricolage { font-family: 'Bricolage Grotesque', sans-serif !important; }</style><link id="all-fonts-link-font-jakarta" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-jakarta">.font-jakarta { font-family: 'Plus Jakarta Sans', sans-serif !important; }</style><link id="all-fonts-link-font-manrope" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-manrope">.font-manrope { font-family: 'Manrope', sans-serif !important; }</style><link id="all-fonts-link-font-space-grotesk" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-space-grotesk">.font-space-grotesk { font-family: 'Space Grotesk', sans-serif !important; }</style><link id="all-fonts-link-font-work-sans" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-work-sans">.font-work-sans { font-family: 'Work Sans', sans-serif !important; }</style><link id="all-fonts-link-font-pt-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&amp;display=swap"><style id="all-fonts-style-font-pt-serif">.font-pt-serif { font-family: 'PT Serif', serif !important; }</style><link id="all-fonts-link-font-geist-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-geist-mono">.font-geist-mono { font-family: 'Geist Mono', monospace !important; }</style><link id="all-fonts-link-font-space-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap"><style id="all-fonts-style-font-space-mono">.font-space-mono { font-family: 'Space Mono', monospace !important; }</style><link id="all-fonts-link-font-quicksand" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-quicksand">.font-quicksand { font-family: 'Quicksand', sans-serif !important; }</style><link id="all-fonts-link-font-nunito" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-nunito">.font-nunito { font-family: 'Nunito', sans-serif !important; }</style><link id="all-fonts-link-font-newsreader" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..800&amp;display=swap"><style id="all-fonts-style-font-newsreader">.font-newsreader { font-family: 'Newsreader', serif !important; }</style><link id="all-fonts-link-font-google-sans-flex" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-google-sans-flex">.font-google-sans-flex { font-family: 'Google Sans Flex', sans-serif !important; }</style><link id="all-fonts-link-font-oswald" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-oswald">.font-oswald { font-family: 'Oswald', sans-serif !important; }</style><link id="all-fonts-link-font-dm-sans" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-dm-sans">.font-dm-sans { font-family: 'DM Sans', sans-serif !important; }</style></head>
+<body class="text-zinc-400 antialiased min-h-screen flex flex-col selection:bg-indigo-500/20 selection:text-indigo-200 overflow-x-hidden font-sans">
+
+<!-- Background (component) added by Aura -->
+<div class="aura-background-component fixed top-0 w-full h-screen -z-10 opacity-20" data-alpha-mask="80" style="; mask-image: linear-gradient(to bottom, transparent, black 0%, black 80%, transparent); -webkit-mask-image: linear-gradient(to bottom, transparent, black 0%, black 80%, transparent)"><div class="aura-background-component top-0 w-full -z-10 absolute h-full">
+  <div data-us-project="qpSlPSWA2bdkUAYztz8z" class="absolute w-full h-full left-0 top-0 -z-10"></div>
+  <script type="text/javascript">
+    !function(){if(!window.UnicornStudio){window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.29/dist/unicornStudio.umd.js",i.onload=function(){window.UnicornStudio.isInitialized||(UnicornStudio.init(),window.UnicornStudio.isInitialized=!0)},(document.head || document.body).appendChild(i)}}();
+  </script>
+</div></div>
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-40 glass-header">
+        <div class="flex h-16 max-w-6xl mr-auto ml-auto pr-6 pl-6 items-center justify-between">
+            <div class="flex gap-3 gap-x-3 gap-y-3 items-center cursor-pointer" onclick="window.location.href='index.html'" role="button">
+                <div class="w-8 h-8 rounded-lg bg-zinc-900 border border-white/10 flex items-center justify-center">
+                    <span class="font-bold text-white text-xs tracking-tighter">M</span>
+                </div>
+                <span class="text-sm font-semibold text-white tracking-tight">Mooze VIP</span>
+            </div>
+
+            <div class="hidden md:flex items-center gap-8 text-xs font-medium">
+                <a href="#about" id="nav-about" class="hover:text-white transition-colors">Quem Somos</a>
+                <a href="#services" id="nav-services" class="hover:text-white transition-colors">Especialidades</a>
+                <a href="#partners" id="nav-partners" class="hover:text-white transition-colors">Parceiros</a>
+            </div>
+
+            <div class="flex items-center gap-2 sm:gap-4">
+                
+                <!-- Language Selector -->
+                <div class="relative">
+                    <button onclick="toggleDropdown('langDropdown', 'langBackdrop')" class="flex items-center justify-center w-8 h-8 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all">
+                        <span id="currentFlag" class="flex items-center justify-center w-5 h-5 rounded overflow-hidden">
+                             <!-- Default Flag (BR) -->
+                             <svg viewBox="0 0 32 24" class="w-full h-full object-cover"><rect width="32" height="24" fill="#009c3b" class=""></rect><path d="M16 2l14 10-14 10L2 12z" fill="#ffdf00" class=""></path><circle cx="16" cy="12" r="6" fill="#002776" class=""></circle><path d="M12 11c1.5 1 5 1 8-1" stroke="#fff" stroke-width="0.8" fill="none" class=""></path></svg>
+                        </span>
+                    </button>
+
+                    <div id="langBackdrop" onclick="closeAllDropdowns()" class="hidden fixed inset-0 z-40 cursor-default bg-transparent"></div>
+
+                    <div id="langDropdown" class="hidden absolute top-full right-0 mt-3 w-40 bg-[#111114] border border-white/10 rounded-xl shadow-2xl shadow-black/80 p-1.5 z-50 animate-in fade-in zoom-in-95 slide-in-from-top-2 duration-200">
+                        <!-- PT -->
+                        <button onclick="setLanguage('pt')" class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-white/5 transition-colors text-left group">
+                            <div class="w-5 h-3.5 rounded-sm overflow-hidden relative shadow-sm shrink-0">
+                                <svg viewBox="0 0 32 24" class="w-full h-full object-cover"><rect width="32" height="24" fill="#009c3b"></rect><path d="M16 2l14 10-14 10L2 12z" fill="#ffdf00"></path><circle cx="16" cy="12" r="6" fill="#002776"></circle></svg>
+                            </div>
+                            <span class="text-xs font-medium text-zinc-400 group-hover:text-white">Português</span>
+                        </button>
+                        <!-- EN -->
+                        <button onclick="setLanguage('en')" class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-white/5 transition-colors text-left group">
+                            <div class="w-5 h-3.5 rounded-sm overflow-hidden relative shadow-sm shrink-0">
+                                <svg viewBox="0 0 32 24" class="w-full h-full object-cover"><rect width="32" height="24" fill="#b22234"></rect><path d="M0 4h32M0 8h32M0 12h32M0 16h32M0 20h32" stroke="#fff" stroke-width="2"></path><rect width="14" height="13" fill="#3c3b6e"></rect></svg>
+                            </div>
+                            <span class="text-xs font-medium text-zinc-400 group-hover:text-white">English</span>
+                        </button>
+                        <!-- ES -->
+                        <button onclick="setLanguage('es')" class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-white/5 transition-colors text-left group">
+                            <div class="w-5 h-3.5 rounded-sm overflow-hidden relative shadow-sm shrink-0">
+                                <svg viewBox="0 0 32 24" class="w-full h-full object-cover"><rect width="32" height="24" fill="#AA151B"></rect><rect y="6" width="32" height="12" fill="#F1BF00"></rect></svg>
+                            </div>
+                            <span class="text-xs font-medium text-zinc-400 group-hover:text-white">Español</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Terms Dropdown Section -->
+                <div class="relative hidden sm:block">
+                    <button onclick="toggleDropdown('termsDropdown', 'termsBackdrop')" class="text-xs font-medium text-zinc-400 hover:text-white transition-colors flex items-center gap-1.5 px-3 py-2 rounded-lg hover:bg-white/5 select-none">
+                        <span id="nav-terms" class="">Termos de Uso</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-50"><path d="m6 9 6 6 6-6"></path></svg>
+                    </button>
+
+                    <div id="termsBackdrop" onclick="closeAllDropdowns()" class="hidden fixed inset-0 z-40 cursor-default bg-transparent"></div>
+
+                    <div id="termsDropdown" class="hidden absolute top-full right-0 mt-3 w-80 bg-[#111114] border border-white/10 rounded-xl shadow-2xl shadow-black/80 p-5 z-50 animate-in fade-in zoom-in-95 slide-in-from-top-2 duration-200">
+                        <div class="space-y-4 text-left">
+                            <p id="terms-desc" class="text-[11px] leading-relaxed text-zinc-400">
+                                 Mooze Vip detém os direitos de publicação e distribuição dos seguintes aplicativos.
+                                Selecione os termos de uso e privacidade da empresa desejada:
+                            </p>
+                            
+                            <a href="https://mooze.vip/termos-de-uso" target="_blank" class="flex items-center gap-3 p-3 bg-black/40 hover:bg-zinc-900 border border-white/5 hover:border-white/20 rounded-lg transition-all group">
+                                <div class="w-10 h-10 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 shrink-0">
+                                    <span class="font-bold text-xs tracking-tight">M</span>
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <h4 class="text-white text-xs font-semibold truncate group-hover:text-indigo-300 transition-colors">Mooze.app</h4>
+                                    <p id="terms-link-desc" class="text-[10px] text-zinc-500 truncate mt-0.5">Termos de uso e privacidade</p>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-zinc-600 group-hover:text-white transition-colors"><path d="m9 18 6-6-6-6"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tally Integration Button -->
+                <div class="relative">
+                    <button onclick="toggleDropdown('supportDropdown-with-close', 'supportBackdrop'); document.getElementById('supportBackdrop').onclick = function() { document.getElementById('supportDropdown-with-close').classList.add('hidden'); this.classList.add('hidden'); }" class="group flex gap-2 hover:bg-zinc-200 transition-all text-xs font-medium text-black bg-white rounded-full py-2 px-4 items-center whitespace-nowrap">
+                        <span id="nav-support" class="hidden xs:inline">Canal de Suporte</span>
+                        <span class="xs:hidden inline">Suporte</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-square" class="lucide lucide-message-square w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform"><path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"></path></svg>
+                    </button>
+
+                    <div id="supportDropdown-with-close" class="hidden absolute top-full right-0 mt-2 w-64 bg-[#111114] border border-white/10 rounded-xl shadow-2xl shadow-black/80 p-1.5 z-50 animate-in fade-in zoom-in-95 slide-in-from-top-2 duration-200 text-left">
+                        <!-- Close Button -->
+                        <button onclick="event.stopPropagation(); document.getElementById('supportDropdown-with-close').classList.add('hidden'); document.getElementById('supportBackdrop').classList.add('hidden');" class="absolute top-2 right-2 p-1 text-zinc-400 hover:text-white bg-black/20 hover:bg-white/10 rounded-md transition-colors z-20" aria-label="Fechar">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"></path><path d="m6 6 18 12"></path></svg>
+                        </button>
+
+                        <div class="space-y-0.5 pt-6">
+                            <!-- Mooze VIP Option -->
+                            <button onclick="openSupport()" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-white/5 transition-colors text-left group">
+                                <div class="w-8 h-8 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 shrink-0">
+                                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-crown"><path d="m2 4 3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14"></path></svg>
+                                </div>
+                                <div>
+                                    <div class="text-xs font-medium text-white group-hover:text-indigo-300 transition-colors">Mooze VIP</div>
+                                    <div class="text-[10px] text-zinc-500">Formulário de Atendimento</div>
+                                </div>
+                            </button>
+                            
+                            <!-- Mooze App Option -->
+                            <a href="mailto:suporte@mooze.app" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-white/5 transition-colors text-left group/item">
+                                <div class="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                                </div>
+                                <div>
+                                    <div class="text-xs font-medium text-white group-hover/item:text-emerald-300 transition-colors">Mooze App</div>
+                                    <div class="text-[10px] text-zinc-500">Enviar e-mail para suporte</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div id="supportBackdrop" onclick="closeAllDropdowns()" class="hidden fixed inset-0 z-40 cursor-default bg-transparent"></div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow pt-32 pr-6 pb-20 pl-6">
+        <div class="max-w-6xl mx-auto space-y-24">
+            
+            <!-- Hero Section -->
+            <section class="text-center space-y-6 animate-fade-in max-w-3xl mx-auto">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-[10px] text-indigo-300 font-medium uppercase tracking-wider">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+                    </span>
+                    <span id="hero-badge" class="">Distribuídora Autorizada</span>
+                </div>
+                
+                <h1 class="text-4xl md:text-6xl font-semibold text-white tracking-tight leading-[1.1]">
+                    <span id="hero-title-1" class="">Distribuição de software e</span> <br>
+                    <span id="hero-title-2" class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-400 to-indigo-400">inteligência de mídia.</span>
+                </h1>
+                
+                <p class="md:text-base leading-relaxed text-sm text-zinc-300 max-w-xl mx-auto" id="hero-desc">
+                    Mooze Vip é a parceira estratégica para desenvolvedores de aplicativos que buscam escalar na América Latina com estrutura americana e expertise local.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                    <a href="#about" id="hero-btn-services" class="px-6 py-3 bg-zinc-900 border border-white/10 hover:border-white/20 hover:bg-zinc-800 text-white text-xs font-medium rounded-lg transition-all w-full sm:w-auto text-center">
+                        Nossos Serviços
+                    </a>
+                    <!-- Tally Integration Button -->
+                    <button onclick="openSupport()" class="px-6 py-3 text-zinc-400 hover:text-white text-xs font-medium transition-colors flex items-center gap-2 justify-center w-full sm:w-auto">
+                        <span id="hero-btn-contact">Falar com especialista</span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" class="lucide lucide-arrow-right w-3 h-3"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                    </button>
+                </div>
+            </section>
+
+            <!-- About / Who We Are -->
+            <section id="about" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="glass-card p-6 rounded-xl space-y-4 flex flex-col items-center md:items-start text-center md:text-left">
+                    <div class="w-10 h-10 rounded-lg bg-zinc-900 border border-white/10 flex items-center justify-center text-indigo-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="target" class="lucide lucide-target w-5 h-5"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                    </div>
+                    <h3 id="card-1-title" class="text-white font-medium text-sm">Alocação Inteligente</h3>
+                    <p id="card-1-desc" class="leading-relaxed text-xs text-zinc-300">
+                        Estratégias precisas de marketing em plataformas online para maximizar o ROI e alcance de público-alvo.
+                    </p>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="glass-card p-6 rounded-xl space-y-4 flex flex-col items-center md:items-start text-center md:text-left">
+                    <div class="w-10 h-10 rounded-lg bg-zinc-900 border border-white/10 flex items-center justify-center text-indigo-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="box" class="lucide lucide-box w-5 h-5"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path><path d="m3.3 7 8.7 5 8.7-5"></path><path d="M12 22V12"></path></svg>
+                    </div>
+                    <h3 id="card-2-title" class="text-white font-medium text-sm">Distribuição &amp; Gestão</h3>
+                    <p id="card-2-desc" class="leading-relaxed text-xs text-zinc-300">
+                        Gerenciamento completo de softwares e apps de terceiros em lojas oficiais e plataformas digitais.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass-card p-6 rounded-xl space-y-4 flex flex-col items-center md:items-start text-center md:text-left">
+                    <div class="w-10 h-10 rounded-lg bg-zinc-900 border border-white/10 flex items-center justify-center text-indigo-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" class="lucide lucide-map-pin w-5 h-5"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    </div>
+                    <h3 id="card-3-title" class="text-white font-medium text-sm">Foco América Latina</h3>
+                    <p id="card-3-desc" class="leading-relaxed text-xs text-zinc-300">
+                        Expertise em marketing digital e cultura de consumo especificamente voltada para o público latino-americano.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Company Description -->
+            <section class="relative rounded-2xl bg-zinc-900/40 border border-white/5 p-8 md:p-12 overflow-hidden text-center md:text-left">
+                <div class="absolute top-0 right-0 -mt-10 -mr-10 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl"></div>
+                
+                <div class="relative z-10 grid md:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6">
+                        <h2 class="text-2xl font-semibold text-white tracking-tight">
+                            <span id="company-title-1">Estrutura Global,</span> 
+                            <span id="company-title-2">Atuação Local.</span>
+                        </h2>
+                        <p id="company-desc-1" class="text-sm leading-7">
+                            Fundada nos <span class="text-white">Estados Unidos da América</span>, a Mooze Vip é a empresa certa para desenvolvedores que não possuem tempo ou estrutura para distribuir seus projetos.
+                        </p>
+                        <p id="company-desc-2" class="leading-7 text-sm">
+                            Possuímos as melhores ferramentas internas e uma equipe de marketing digital com "canhões de mídia" e parceiros de networking focados especialmente na América Latina.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-black/20 p-4 rounded-lg border border-white/5">
+                            <h4 id="stat-usa" class="text-indigo-400 font-bold text-lg">EUA</h4>
+                            <p id="stat-usa-desc" class="text-[10px] uppercase tracking-wider mt-1">Sede &amp; Legal</p>
+                        </div>
+                        <div class="bg-black/20 p-4 rounded-lg border border-white/5">
+                            <h4 id="stat-latam" class="text-indigo-400 font-bold text-lg">LATAM</h4>
+                            <p id="stat-latam-desc" class="text-[10px] uppercase tracking-wider mt-1">Foco de Mercado</p>
+                        </div>
+                        <div class="bg-black/20 p-4 rounded-lg border border-white/5 col-span-2">
+                            <h4 id="stat-dev-title" class="text-white font-medium text-sm">Developer Friendly</h4>
+                            <p id="stat-dev-desc" class="text-xs mt-2 opacity-70">Ajudamos quem constrói o futuro.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Specialties -->
+            <section id="services" class="">
+                <div class="flex flex-col md:flex-row items-center md:items-end justify-between mb-8 gap-4 text-center md:text-left">
+                    <div class="">
+                        <span class="text-[10px] uppercase tracking-widest text-indigo-400 font-medium">Developer</span>
+                        <h2 id="services-title" class="text-2xl font-semibold text-white mt-2 tracking-tight">Especialidades</h2>
+                    </div>
+                    <p id="services-subtitle" class="text-xs max-w-sm text-center md:text-left">Entenda como podemos lhe servir passo a passo.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10 border border-white/10 rounded-lg overflow-hidden">
+                    <!-- Item 1 -->
+                    <div class="bg-[#0a0a0c] p-8 hover:bg-[#111114] transition-colors group flex flex-col items-center md:items-start text-center md:text-left">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="file-text" class="lucide lucide-file-text w-6 h-6 text-zinc-500 group-hover:text-white mb-4 transition-colors"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>
+                        <h3 id="serv-1-title" class="text-white font-medium text-sm mb-2">Administração &amp; Documentação</h3>
+                        <p id="serv-1-desc" class="leading-relaxed text-xs text-zinc-300 opacity-70">
+                            Consultoria de publicação de aplicativos em lojas oficiais (App Store, Google Play), ajuda com documentação burocrática e gerenciamento administrativo.
+                        </p>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="bg-[#0a0a0c] p-8 hover:bg-[#111114] transition-colors group flex flex-col items-center md:items-start text-center md:text-left">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="bar-chart" class="lucide lucide-bar-chart w-6 h-6 text-zinc-500 group-hover:text-white mb-4 transition-colors"><path d="M5 21v-6"></path><path d="M12 21V9"></path><path d="M19 21V3"></path></svg>
+                        <h3 id="serv-2-title" class="text-white font-medium text-sm mb-2">Estratégias de Mídia</h3>
+                        <p id="serv-2-desc" class="leading-relaxed text-xs text-zinc-300 opacity-70">
+                            Marketing agressivo e inteligente para distribuir sistemas ou aplicativos. Nossa equipe de especialistas está pronta para escalar seu produto.
+                        </p>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="hover:bg-[#111114] transition-colors group md:col-span-2 bg-[#0a0a0c] pt-8 pr-8 pb-8 pl-8 flex flex-col items-center md:items-start text-center md:text-left">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="users" class="lucide lucide-users w-6 h-6 text-zinc-500 group-hover:text-white mb-4 transition-colors"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                        <h3 id="serv-3-title" class="text-white font-medium text-sm mb-2">Networking &amp; Apoio</h3>
+                        <p id="serv-3-desc" class="leading-relaxed text-xs text-zinc-300 opacity-70 max-w-2xl">
+                            Serviços de networking especializados através de conexões com especialistas no núcleo de negócios educacional, vendas ou marketing digital puro.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Partners -->
+            <section id="partners" class="flex flex-col items-center md:items-start">
+                <div class="w-full text-center md:text-left">
+                    <span id="partners-label" class="text-[10px] uppercase tracking-widest text-indigo-400 font-medium">Portfólio</span>
+                    <h2 id="partners-title" class="text-2xl font-semibold text-white mt-2 mb-8 tracking-tight">Parceiros Publicados</h2>
+                </div>
+
+                <div class="glass-card rounded-xl p-1 max-w-lg w-full">
+                    <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-[#0f0f11] rounded-lg p-6 text-center sm:text-left">
+                        <div class="flex shrink-0 bg-gradient-to-br from-indigo-900 to-zinc-900 w-16 h-16 border-white/10 border rounded-xl items-center justify-center">
+                            <img src="https://mooze.vip/assets/clients-mooze.png" alt="Mooze" class="w-full h-full object-cover rounded-xl">
+                        </div>
+                        <div class="flex-grow space-y-1 w-full">
+                            <h3 class="text-white font-medium text-sm">Mooze</h3>
+                            <p id="partner-desc" class="text-xs text-zinc-300">Serviços Depix e Bitcoin</p>
+                            <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2 pt-2 w-full">
+                                <a href="https://mooze.app" class="inline-flex items-center justify-center text-[10px] uppercase hover:bg-zinc-200 transition-colors font-semibold text-black tracking-wider bg-white rounded-md py-1.5 px-4" id="partner-btn">
+                                    Visitar
+                                </a>
+                                <a href="https://t.me/Moozep2pbot" target="_blank" class="inline-flex items-center justify-center text-[10px] uppercase hover:bg-white/10 transition-colors font-semibold text-white tracking-wider bg-white/5 border border-white/10 rounded-md py-1.5 px-4">
+                                    Canal de Suporte
+                                </a>
+                                <a href="mailto:suporte@mooze.app" class="inline-flex items-center justify-center text-[10px] uppercase hover:bg-white/10 transition-colors font-semibold text-white tracking-wider bg-white/5 border border-white/10 rounded-md py-1.5 px-4">
+                                    Contato
+                                </a>
+                            </div>
+                        </div>
+                        <div class="pt-2 sm:pt-0">
+                            <!-- Google Play Badge Simulation -->
+                            <div class="border border-white/10 bg-black rounded px-3 py-1 flex items-center gap-2 opacity-80 hover:opacity-100 cursor-pointer transition-opacity">
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.5,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"></path>
+                                </svg>
+                                <div class="flex flex-col text-left">
+                                    <span class="text-[8px] uppercase leading-none">Get it on</span>
+                                    <span class="text-[10px] font-semibold text-white leading-none mt-0.5">Google Play</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 bg-black py-12 px-6">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 text-center md:text-left">
+            <div class="space-y-4 flex flex-col items-center md:items-start">
+                <div class="flex items-center gap-2">
+                    <div class="w-6 h-6 rounded bg-zinc-900 border border-white/10 flex items-center justify-center">
+                        <span class="font-bold text-white text-[10px]">M</span>
+                    </div>
+                    <span class="font-semibold text-white text-xs">Mooze LLC</span>
+                </div>
+                <p id="footer-address" class="text-xs text-zinc-500 max-w-sm">
+                    Delaware, Estados Unidos da América.
+                </p>
+                <p class="text-[10px] text-zinc-600 uppercase tracking-wider">
+                    © 2025 Mooze LLC. All rights reserved.
+                </p>
+            </div>
+            
+            <div class="space-y-4 md:place-self-end w-full">
+                <div class="text-[10px] text-zinc-500 space-y-2 leading-relaxed max-w-md mx-auto md:ml-auto md:mr-0">
+                    <p id="footer-disclaimer-1" class="">Distribuidor autorizado da Mooze App e de todas as empresas aqui publicadas.</p>
+                    <p id="footer-disclaimer-2" class="">
+                        Somos uma empresa de marketing digital e distribuição de software de terceiros. A Mooze Vip não se responsabiliza pelos procedimentos de serviços prestados pelos produtos distribuídos de nossos terceiros, somos apenas distribuidores e promotores.
+                    </p>
+                </div>
+                <div class="flex justify-center md:justify-end gap-6 pt-2">
+                    <!-- Tally Integration Button -->
+                    <button onclick="openSupport()" id="footer-contact" class="text-xs text-zinc-400 hover:text-white transition-colors">Contato &amp; Suporte</button>
+                    <a href="https://mooze.vip/politicas" id="footer-privacy" class="hover:text-white transition-colors text-xs text-zinc-400">Políticas de Privacidade</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Icons
+        lucide.createIcons();
+
+        // UI Logic
+        function toggleDropdown(id, backdropId) {
+            const dropdown = document.getElementById(id);
+            const backdrop = document.getElementById(backdropId);
+            
+            // Close others first
+            const allDropdowns = ['langDropdown', 'termsDropdown'];
+            const allBackdrops = ['langBackdrop', 'termsBackdrop'];
+            
+            allDropdowns.forEach(d => {
+                if(d !== id) document.getElementById(d).classList.add('hidden');
+            });
+            allBackdrops.forEach(b => {
+                if(b !== backdropId) document.getElementById(b).classList.add('hidden');
+            });
+
+            dropdown.classList.toggle('hidden');
+            backdrop.classList.toggle('hidden');
+        }
+
+        function closeAllDropdowns() {
+            document.getElementById('langDropdown').classList.add('hidden');
+            document.getElementById('langBackdrop').classList.add('hidden');
+            document.getElementById('termsDropdown').classList.add('hidden');
+            document.getElementById('termsBackdrop').classList.add('hidden');
+        }
+
+        // Translation Logic
+        const translations = {
+            'pt': {
+                'nav-about': 'Quem Somos',
+                'nav-services': 'Especialidades',
+                'nav-partners': 'Parceiros',
+                'nav-terms': 'Termos de Uso',
+                'nav-support': 'Canal de Suporte',
+                'terms-desc': 'Mooze Vip detém os direitos de publicação e distribuição dos seguintes aplicativos. Selecione os termos de uso e privacidade da empresa desejada:',
+                'terms-link-desc': 'Termos de uso e privacidade',
+                'hero-badge': 'Distribuídora Autorizada',
+                'hero-title-1': 'Distribuição de software e',
+                'hero-title-2': 'inteligência de mídia.',
+                'hero-desc': 'Mooze Vip é a parceira estratégica para desenvolvedores de aplicativos que buscam escalar na América Latina com estrutura americana e expertise local.',
+                'hero-btn-services': 'Nossos Serviços',
+                'hero-btn-contact': 'Falar com especialista',
+                'card-1-title': 'Alocação Inteligente',
+                'card-1-desc': 'Estratégias precisas de marketing em plataformas online para maximizar o ROI e alcance de público-alvo.',
+                'card-2-title': 'Distribuição & Gestão',
+                'card-2-desc': 'Gerenciamento completo de softwares e apps de terceiros em lojas oficiais e plataformas digitais.',
+                'card-3-title': 'Foco América Latina',
+                'card-3-desc': 'Expertise em marketing digital e cultura de consumo especificamente voltada para o público latino-americano.',
+                'company-title-1': 'Estrutura Global,',
+                'company-title-2': 'Atuação Local.',
+                'company-desc-1': 'Fundada nos <span class="text-white">Estados Unidos da América</span>, a Mooze Vip é a empresa certa para desenvolvedores que não possuem tempo ou estrutura para distribuir seus projetos.',
+                'company-desc-2': 'Possuímos as melhores ferramentas internas e uma equipe de marketing digital com "canhões de mídia" e parceiros de networking focados especialmente na América Latina.',
+                'stat-usa': 'EUA',
+                'stat-usa-desc': 'SEDE & LEGAL',
+                'stat-latam': 'LATAM',
+                'stat-latam-desc': 'FOCO DE MERCADO',
+                'stat-dev-title': 'Developer Friendly',
+                'stat-dev-desc': 'Ajudamos quem constrói o futuro.',
+                'services-title': 'Especialidades',
+                'services-subtitle': 'Entenda como podemos lhe servir passo a passo.',
+                'serv-1-title': 'Administração & Documentação',
+                'serv-1-desc': 'Consultoria de publicação de aplicativos em lojas oficiais (App Store, Google Play), ajuda com documentação burocrática e gerenciamento administrativo.',
+                'serv-2-title': 'Estratégias de Mídia',
+                'serv-2-desc': 'Marketing agressivo e inteligente para distribuir sistemas ou aplicativos. Nossa equipe de especialistas está pronta para escalar seu produto.',
+                'serv-3-title': 'Networking & Apoio',
+                'serv-3-desc': 'Serviços de networking especializados através de conexões com especialistas no núcleo de negócios educacional, vendas ou marketing digital puro.',
+                'partners-label': 'PORTFÓLIO',
+                'partners-title': 'Parceiros Publicados',
+                'partner-desc': 'Serviços Depix e Bitcoin',
+                'partner-btn': 'VISITAR',
+                'footer-address': 'Delaware, Estados Unidos da América.',
+                'footer-disclaimer-1': 'Distribuidor autorizado da Mooze App e de todas as empresas aqui publicadas.',
+                'footer-disclaimer-2': 'Somos uma empresa de marketing digital e distribuição de software de terceiros. A Mooze Vip não se responsabiliza pelos procedimentos de serviços prestados pelos produtos distribuídos de nossos terceiros, somos apenas distribuidores e promotores.',
+                'footer-contact': 'Contato & Suporte',
+                'footer-privacy': 'Políticas de Privacidade'
+            },
+            'en': {
+                'nav-about': 'Who We Are',
+                'nav-services': 'Specialties',
+                'nav-partners': 'Partners',
+                'nav-terms': 'Terms of Use',
+                'nav-support': 'Support Channel',
+                'terms-desc': 'Mooze Vip holds publication and distribution rights for the following applications. Select the terms of use and privacy for the desired company:',
+                'terms-link-desc': 'Terms of use and privacy',
+                'hero-badge': 'Authorized Distributor',
+                'hero-title-1': 'Software distribution and',
+                'hero-title-2': 'media intelligence.',
+                'hero-desc': 'Mooze Vip is the strategic partner for app developers looking to scale in Latin America with American infrastructure and local expertise.',
+                'hero-btn-services': 'Our Services',
+                'hero-btn-contact': 'Talk to an expert',
+                'card-1-title': 'Smart Allocation',
+                'card-1-desc': 'Precise online platform marketing strategies to maximize ROI and target audience reach.',
+                'card-2-title': 'Distribution & Mgmt',
+                'card-2-desc': 'Complete management of third-party software and apps on official stores and digital platforms.',
+                'card-3-title': 'Latin America Focus',
+                'card-3-desc': 'Expertise in digital marketing and consumer culture specifically targeted at the Latin American audience.',
+                'company-title-1': 'Global Structure,',
+                'company-title-2': 'Local Action.',
+                'company-desc-1': 'Founded in the <span class="text-white">United States of America</span>, Mooze Vip is the right company for developers who lack the time or structure to distribute their projects.',
+                'company-desc-2': 'We possess the best internal tools and a digital marketing team with "media cannons" and networking partners focused especially on Latin America.',
+                'stat-usa': 'USA',
+                'stat-usa-desc': 'HQ & LEGAL',
+                'stat-latam': 'LATAM',
+                'stat-latam-desc': 'MARKET FOCUS',
+                'stat-dev-title': 'Developer Friendly',
+                'stat-dev-desc': 'We help those who build the future.',
+                'services-title': 'Specialties',
+                'services-subtitle': 'Understand how we can serve you step by step.',
+                'serv-1-title': 'Admin & Documentation',
+                'serv-1-desc': 'App publication consulting on official stores (App Store, Google Play), help with bureaucratic documentation and administrative management.',
+                'serv-2-title': 'Media Strategies',
+                'serv-2-desc': 'Aggressive and intelligent marketing to distribute systems or apps. Our team of specialists is ready to scale your product.',
+                'serv-3-title': 'Networking & Support',
+                'serv-3-desc': 'Specialized networking services connecting with experts in educational business, sales, or pure digital marketing.',
+                'partners-label': 'PORTFOLIO',
+                'partners-title': 'Published Partners',
+                'partner-desc': 'Depix and Bitcoin Services',
+                'partner-btn': 'VISIT',
+                'footer-address': 'Delaware, United States of America.',
+                'footer-disclaimer-1': 'Authorized distributor of Mooze App and all companies published herein.',
+                'footer-disclaimer-2': 'We are a digital marketing and third-party software distribution company. Mooze Vip is not responsible for service procedures provided by our third-party distributed products; we are solely distributors and promoters.',
+                'footer-contact': 'Contact & Support',
+                'footer-privacy': 'Privacy Policies'
+            },
+            'es': {
+                'nav-about': 'Quiénes Somos',
+                'nav-services': 'Especialidades',
+                'nav-partners': 'Socios',
+                'nav-terms': 'Términos de Uso',
+                'nav-support': 'Canal de Soporte',
+                'terms-desc': 'Mooze Vip posee los derechos de publicación y distribución de las siguientes aplicaciones. Seleccione los términos de uso y privacidad de la empresa deseada:',
+                'terms-link-desc': 'Términos de uso y privacidad',
+                'hero-badge': 'Distribuidor Autorizado',
+                'hero-title-1': 'Distribución de software e',
+                'hero-title-2': 'inteligencia de medios.',
+                'hero-desc': 'Mooze Vip es el socio estratégico para desarrolladores de aplicaciones que buscan escalar en América Latina con estructura estadounidense y experiencia local.',
+                'hero-btn-services': 'Nuestros Servicios',
+                'hero-btn-contact': 'Hablar con especialista',
+                'card-1-title': 'Asignación Inteligente',
+                'card-1-desc': 'Estrategias precisas de marketing en plataformas online para maximizar el ROI y alcance del público objetivo.',
+                'card-2-title': 'Distribución y Gestión',
+                'card-2-desc': 'Gestión completa de software y aplicaciones de terceros en tiendas oficiales y plataformas digitales.',
+                'card-3-title': 'Enfoque América Latina',
+                'card-3-desc': 'Experiencia en marketing digital y cultura de consumo específicamente dirigida al público latinoamericano.',
+                'company-title-1': 'Estructura Global,',
+                'company-title-2': 'Actuación Local.',
+                'company-desc-1': 'Fundada en los <span class="text-white">Estados Unidos de América</span>, Mooze Vip es la empresa adecuada para desarrolladores que no tienen tiempo o estructura para distribuir sus proyectos.',
+                'company-desc-2': 'Poseemos las mejores herramientas internas y un equipo de marketing digital con "cañones de medios" y socios de networking enfocados especialmente en América Latina.',
+                'stat-usa': 'EE.UU.',
+                'stat-usa-desc': 'HQ & LEGAL',
+                'stat-latam': 'LATAM',
+                'stat-latam-desc': 'ENFOQUE DE MERCADO',
+                'stat-dev-title': 'Developer Friendly',
+                'stat-dev-desc': 'Ayudamos a quienes construyen el futuro.',
+                'services-title': 'Especialidades',
+                'services-subtitle': 'Entienda cómo podemos servirle paso a paso.',
+                'serv-1-title': 'Admin y Documentación',
+                'serv-1-desc': 'Consultoría de publicación de aplicaciones en tiendas oficiales (App Store, Google Play), ayuda con documentación burocrática y gestión administrativa.',
+                'serv-2-title': 'Estrategias de Medios',
+                'serv-2-desc': 'Marketing agresivo e inteligente para distribuir sistemas o aplicaciones. Nuestro equipo de especialistas está listo para escalar su producto.',
+                'serv-3-title': 'Networking y Apoyo',
+                'serv-3-desc': 'Servicios de networking especializados a través de conexiones con expertos en el núcleo de negocios educativos, ventas o marketing digital puro.',
+                'partners-label': 'PORTAFOLIO',
+                'partners-title': 'Socios Publicados',
+                'partner-desc': 'Servicios Depix y Bitcoin',
+                'partner-btn': 'VISITAR',
+                'footer-address': 'Delaware, Estados Unidos de América.',
+                'footer-disclaimer-1': 'Distribuidor autorizado de Mooze App y todas las empresas publicadas aquí.',
+                'footer-disclaimer-2': 'Somos una empresa de marketing digital y distribución de software de terceros. Mooze Vip no se hace responsable de los procedimientos de servicios prestados por los productos distribuidos de nuestros terceros, somos solo distribuidores y promotores.',
+                'footer-contact': 'Contacto y Soporte',
+                'footer-privacy': 'Políticas de Privacidad'
+            }
+        };
+
+        const flags = {
+            'pt': '<svg viewBox="0 0 32 24" class="w-full h-full object-cover"><rect width="32" height="24" fill="#009c3b"/><path d="M16 2l14 10-14 10L2 12z" fill="#ffdf00"/><circle cx="16" cy="12" r="6" fill="#002776"/></svg>',
+            'en': '<svg viewBox="0 0 32 24" class="w-full h-full object-cover"><rect width="32" height="24" fill="#b22234"/><path d="M0 4h32M0 8h32M0 12h32M0 16h32M0 20h32" stroke="#fff" stroke-width="2"/><rect width="14" height="13" fill="#3c3b6e"/></svg>',
+            'es': '<svg viewBox="0 0 32 24" class="w-full h-full object-cover"><rect width="32" height="24" fill="#AA151B"/><rect y="6" width="32" height="12" fill="#F1BF00"/></svg>'
+        };
+
+        function setLanguage(lang) {
+            // Update flag
+            document.getElementById('currentFlag').innerHTML = flags[lang];
+            
+            // Update Text
+            const t = translations[lang];
+            for (const [key, value] of Object.entries(t)) {
+                const el = document.getElementById(key);
+                if (el) el.innerHTML = value;
+            }
+            
+            closeAllDropdowns();
+        }
+
+        // Tally Integration
+        function openSupport() {
+            if (typeof Tally !== 'undefined') {
+                Tally.openPopup('wgKp8J', {
+                    layout: 'modal',
+                    width: 700,
+                    emoji: { text: '👋', animation: 'wave' },
+                    autoClose: 3000
+                });
+            } else {
+                console.warn('Tally script not loaded yet.');
+            }
+        }
+    </script>
+
+</body></html>
