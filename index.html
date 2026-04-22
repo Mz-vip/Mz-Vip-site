@@ -129,7 +129,7 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.06);
                 <div class="relative">
                     <button onclick="toggleDropdown('supportDropdown-with-close', 'supportBackdrop'); document.getElementById('supportBackdrop').onclick = function() { document.getElementById('supportDropdown-with-close').classList.add('hidden'); this.classList.add('hidden'); }" class="group flex gap-2 hover:bg-zinc-200 transition-all text-xs font-medium text-black bg-white rounded-full py-2 px-4 items-center whitespace-nowrap">
                         <span id="nav-support" class="hidden xs:inline">Canal de Suporte</span>
-                        <span class="xs:hidden inline">Suporte</span>
+                        <span id="nav-support-short" class="xs:hidden inline">Suporte</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-square" class="lucide lucide-message-square w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform"><path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"></path></svg>
                     </button>
 
@@ -147,7 +147,7 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.06);
                                 </div>
                                 <div>
                                     <div class="text-xs font-medium text-white group-hover:text-indigo-300 transition-colors">Mooze VIP</div>
-                                    <div class="text-[10px] text-zinc-500">Formulário de Atendimento</div>
+                                    <div id="support-dropdown-vip-desc" class="text-[10px] text-zinc-500">Formulário de Atendimento</div>
                                 </div>
                             </button>
                             
@@ -158,7 +158,7 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.06);
                                 </div>
                                 <div>
                                     <div class="text-xs font-medium text-white group-hover/item:text-emerald-300 transition-colors">Mooze App</div>
-                                    <div class="text-[10px] text-zinc-500">Enviar e-mail para suporte</div>
+                                    <div id="support-dropdown-app-desc" class="text-[10px] text-zinc-500">Enviar e-mail para suporte</div>
                                 </div>
                             </a>
                         </div>
@@ -276,7 +276,7 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.06);
             <section id="services" class="">
                 <div class="flex flex-col md:flex-row items-center md:items-end justify-between mb-8 gap-4 text-center md:text-left">
                     <div class="">
-                        <span class="text-[10px] uppercase tracking-widest text-indigo-400 font-medium">Developer</span>
+                        <span id="services-label" class="text-[10px] uppercase tracking-widest text-indigo-400 font-medium">Developer</span>
                         <h2 id="services-title" class="text-2xl font-semibold text-white mt-2 tracking-tight">Especialidades</h2>
                     </div>
                     <p id="services-subtitle" class="text-xs max-w-sm text-center md:text-left">Entenda como podemos lhe servir passo a passo.</p>
@@ -331,10 +331,10 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.06);
                                 <a href="https://mooze.app" class="inline-flex items-center justify-center text-[10px] uppercase hover:bg-zinc-200 transition-colors font-semibold text-black tracking-wider bg-white rounded-md py-1.5 px-4" id="partner-btn">
                                     Visitar
                                 </a>
-                                <a href="https://t.me/Moozep2pbot" target="_blank" class="inline-flex items-center justify-center text-[10px] uppercase hover:bg-white/10 transition-colors font-semibold text-white tracking-wider bg-white/5 border border-white/10 rounded-md py-1.5 px-4">
+                                <a href="https://t.me/Moozep2pbot" target="_blank" id="partner-btn-support" class="inline-flex items-center justify-center text-[10px] uppercase hover:bg-white/10 transition-colors font-semibold text-white tracking-wider bg-white/5 border border-white/10 rounded-md py-1.5 px-4">
                                     Canal de Suporte
                                 </a>
-                                <a href="mailto:suporte@mooze.app" class="inline-flex items-center justify-center text-[10px] uppercase hover:bg-white/10 transition-colors font-semibold text-white tracking-wider bg-white/5 border border-white/10 rounded-md py-1.5 px-4">
+                                <a href="mailto:suporte@mooze.app" id="partner-btn-contact" class="inline-flex items-center justify-center text-[10px] uppercase hover:bg-white/10 transition-colors font-semibold text-white tracking-wider bg-white/5 border border-white/10 rounded-md py-1.5 px-4">
                                     Contato
                                 </a>
                             </div>
@@ -425,6 +425,9 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.06);
                 'nav-partners': 'Parceiros',
                 'nav-terms': 'Termos de Uso',
                 'nav-support': 'Canal de Suporte',
+                'nav-support-short': 'Suporte',
+                'support-dropdown-vip-desc': 'Formulário de Atendimento',
+                'support-dropdown-app-desc': 'Enviar e-mail para suporte',
                 'terms-desc': 'Mooze Vip detém os direitos de publicação e distribuição dos seguintes aplicativos. Selecione os termos de uso e privacidade da empresa desejada:',
                 'terms-link-desc': 'Termos de uso e privacidade',
                 'hero-badge': 'Distribuídora Autorizada',
@@ -457,10 +460,13 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.06);
                 'serv-2-desc': 'Marketing agressivo e inteligente para distribuir sistemas ou aplicativos. Nossa equipe de especialistas está pronta para escalar seu produto.',
                 'serv-3-title': 'Networking & Apoio',
                 'serv-3-desc': 'Serviços de networking especializados através de conexões com especialistas no núcleo de negócios educacional, vendas ou marketing digital puro.',
+                'services-label': 'Developer',
                 'partners-label': 'PORTFÓLIO',
                 'partners-title': 'Parceiros Publicados',
                 'partner-desc': 'Serviços Depix e Bitcoin',
                 'partner-btn': 'VISITAR',
+                'partner-btn-support': 'CANAL DE SUPORTE',
+                'partner-btn-contact': 'CONTATO',
                 'footer-address': 'Delaware, Estados Unidos da América.',
                 'footer-disclaimer-1': 'Distribuidor autorizado da Mooze App e de todas as empresas aqui publicadas.',
                 'footer-disclaimer-2': 'Somos uma empresa de marketing digital e distribuição de software de terceiros. A Mooze Vip não se responsabiliza pelos procedimentos de serviços prestados pelos produtos distribuídos de nossos terceiros, somos apenas distribuidores e promotores.',
@@ -473,6 +479,9 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.06);
                 'nav-partners': 'Partners',
                 'nav-terms': 'Terms of Use',
                 'nav-support': 'Support Channel',
+                'nav-support-short': 'Support',
+                'support-dropdown-vip-desc': 'Service Form',
+                'support-dropdown-app-desc': 'Send email to support',
                 'terms-desc': 'Mooze Vip holds publication and distribution rights for the following applications. Select the terms of use and privacy for the desired company:',
                 'terms-link-desc': 'Terms of use and privacy',
                 'hero-badge': 'Authorized Distributor',
@@ -505,10 +514,13 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.06);
                 'serv-2-desc': 'Aggressive and intelligent marketing to distribute systems or apps. Our team of specialists is ready to scale your product.',
                 'serv-3-title': 'Networking & Support',
                 'serv-3-desc': 'Specialized networking services connecting with experts in educational business, sales, or pure digital marketing.',
+                'services-label': 'Developer',
                 'partners-label': 'PORTFOLIO',
                 'partners-title': 'Published Partners',
                 'partner-desc': 'Depix and Bitcoin Services',
                 'partner-btn': 'VISIT',
+                'partner-btn-support': 'SUPPORT CHANNEL',
+                'partner-btn-contact': 'CONTACT',
                 'footer-address': 'Delaware, United States of America.',
                 'footer-disclaimer-1': 'Authorized distributor of Mooze App and all companies published herein.',
                 'footer-disclaimer-2': 'We are a digital marketing and third-party software distribution company. Mooze Vip is not responsible for service procedures provided by our third-party distributed products; we are solely distributors and promoters.',
@@ -521,6 +533,9 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.06);
                 'nav-partners': 'Socios',
                 'nav-terms': 'Términos de Uso',
                 'nav-support': 'Canal de Soporte',
+                'nav-support-short': 'Soporte',
+                'support-dropdown-vip-desc': 'Formulario de Atención',
+                'support-dropdown-app-desc': 'Enviar correo a soporte',
                 'terms-desc': 'Mooze Vip posee los derechos de publicación y distribución de las siguientes aplicaciones. Seleccione los términos de uso y privacidad de la empresa deseada:',
                 'terms-link-desc': 'Términos de uso y privacidad',
                 'hero-badge': 'Distribuidor Autorizado',
@@ -553,10 +568,13 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.06);
                 'serv-2-desc': 'Marketing agresivo e inteligente para distribuir sistemas o aplicaciones. Nuestro equipo de especialistas está listo para escalar su producto.',
                 'serv-3-title': 'Networking y Apoyo',
                 'serv-3-desc': 'Servicios de networking especializados a través de conexiones con expertos en el núcleo de negocios educativos, ventas o marketing digital puro.',
+                'services-label': 'Developer',
                 'partners-label': 'PORTAFOLIO',
                 'partners-title': 'Socios Publicados',
                 'partner-desc': 'Servicios Depix y Bitcoin',
                 'partner-btn': 'VISITAR',
+                'partner-btn-support': 'CANAL DE SOPORTE',
+                'partner-btn-contact': 'CONTACTO',
                 'footer-address': 'Delaware, Estados Unidos de América.',
                 'footer-disclaimer-1': 'Distribuidor autorizado de Mooze App y todas las empresas publicadas aquí.',
                 'footer-disclaimer-2': 'Somos una empresa de marketing digital y distribución de software de terceros. Mooze Vip no se hace responsable de los procedimientos de servicios prestados por los productos distribuidos de nuestros terceros, somos solo distribuidores y promotores.',
