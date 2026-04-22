@@ -347,7 +347,7 @@ Mooze Vip does not provide direct support to end users of the services it repres
       <div class="flex items-center gap-2">
         <span class="font-semibold text-zinc-500 tracking-tight">MOOZE VIP</span>
       </div>
-      <p class="">Mooze.vip — Todos os direitos reservados.</p>
+      <p class="">Mooze.vip — <span id="footer-rights-pt">Todos os direitos reservados.</span><span id="footer-rights-en" class="hidden">All rights reserved.</span><span id="footer-rights-es" class="hidden">Todos los derechos reservados.</span></p>
     </footer>
 
   </div>
@@ -399,23 +399,29 @@ Mooze Vip does not provide direct support to end users of the services it repres
             ['pt', 'en', 'es'].forEach(l => {
                 const content = document.getElementById('content-' + l);
                 const intro = document.getElementById('intro-text-' + l);
-                
+                const footerRights = document.getElementById('footer-rights-' + l);
+
                 content.classList.remove('fade-enter-active');
                 content.classList.add('fade-enter');
-                
+
                 intro.classList.remove('fade-enter-active');
                 intro.classList.add('fade-enter');
+
+                if (footerRights) footerRights.classList.add('hidden');
             });
 
             // Show selected content and intro
             const activeContent = document.getElementById('content-' + lang);
             const activeIntro = document.getElementById('intro-text-' + lang);
+            const activeFooterRights = document.getElementById('footer-rights-' + lang);
 
             activeContent.classList.remove('fade-enter');
             activeContent.classList.add('fade-enter-active');
 
             activeIntro.classList.remove('fade-enter');
             activeIntro.classList.add('fade-enter-active');
+
+            if (activeFooterRights) activeFooterRights.classList.remove('hidden');
 
             // Scroll to top to show changes
             window.scrollTo({ top: 0, behavior: 'smooth' });
