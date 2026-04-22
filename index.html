@@ -585,6 +585,63 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.06);
             closeAllDropdowns();
         }
 
+        // ─── Auto-detect browser language + localStorage persistence ───
+        (function() {
+            var STORAGE_KEY = 'mooze-vip-lang';
+            var SUPPORTED = ['pt', 'en', 'es'];
+            var DEFAULT_LANG = 'en';
+
+            function detectBrowserLanguage() {
+                var langs = navigator.languages || [navigator.language || navigator.userLanguage || ''];
+                for (var i = 0; i < langs.length; i++) {
+                    var tag = langs[i].toLowerCase();
+                    // pt-BR, pt-PT, pt → português
+                    if (tag.startsWith('pt')) return 'pt';
+                    // es, es-419, es-MX, es-AR, es-* → espanhol
+                    if (tag.startsWith('es')) return 'es';
+                    // en, en-US, en-GB, en-* → inglês
+                    if (tag.startsWith('en')) return 'en';
+                }
+                return DEFAULT_LANG;
+            }
+
+            function getInitialLanguage() {
+                // 1. Preferência manual salva?
+                var saved = null;
+                try { saved = localStorage.getItem(STORAGE_KEY); } catch(e) {}
+                if (saved && SUPPORTED.indexOf(saved) !== -1) return saved;
+                // 2. Detectar do navegador
+                return detectBrowserLanguage();
+            }
+
+            // Aplica idioma ao carregar (só se diferente do default PT)
+            var lang = getInitialLanguage();
+            if (lang !== 'pt') {
+                // Aguarda DOM pronto para garantir que setLanguage() e elementos existam
+                if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', function() { setLanguage(lang); });
+                } else {
+                    setLanguage(lang);
+                }
+            }
+
+            // Interceptar setLanguage original para salvar no localStorage
+            var _originalSetLanguage = setLanguage;
+            setLanguage = function(lang) {
+                try { localStorage.setItem(STORAGE_KEY, lang); } catch(e) {}
+                _originalSetLanguage(lang);
+            };
+
+            // Sincronizar entre abas
+            try {
+                window.addEventListener('storage', function(e) {
+                    if (e.key === STORAGE_KEY && e.newValue && SUPPORTED.indexOf(e.newValue) !== -1) {
+                        _originalSetLanguage(e.newValue);
+                    }
+                });
+            } catch(e) {}
+        })();
+
         // Tally Integration
         function openSupport() {
             if (typeof Tally !== 'undefined') {
